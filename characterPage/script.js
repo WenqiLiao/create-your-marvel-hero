@@ -122,3 +122,26 @@ function nextweapon()
     }
     
 }
+
+function randSup() {
+  const randomHeroUrl = getRandomData('hero');
+  const container = document.querySelector('.hero-content');
+  const newImg = document.createElement('img');
+  newImg.setAttribute('src',randomHeroUrl);
+  
+  container.appendChild(newImg);
+}
+
+function getRandomData(type){
+  return data[type][rn(data[type].length)];
+}
+
+const hero = ['weapon1.png',]
+
+function rn(len) {
+  return Math.floor(Math.random() * len);
+}
+
+const data = {
+  hero
+}
